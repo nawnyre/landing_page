@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Lanind Page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <header>
+        <img src="./assets/logo.svg">
+        <div class="sections">
+        <p>Features</p>
+        <p>Team</p>
+        <p>Sign in</p>
+        </div>
+    </header>
+    <main>
+        <div class="first_img_texts">
+        <div class="first_image">
+        <img src="./assets/illustration-1.svg">
+        </div>
+        <div class="first_texts">
+        <h1>All your files in one secure location, accessible anywhere.</h1>
+        <p>Fylo stores your most important files in one secure location.
+            Access them wherever you need, share and collaborate with friends, family,
+            and co-workers.</p>
+        </div>
+        </div>
+        <label for="email1"></label>
+        <input type="email" id="email1" name="email1" placeholder="Enter your email..." required/>
+        <button type="submit" onclick="validateEmails()">Get Started</button>
+        <p id="email1Error" class="errorMessage" style="display:none; color: red; size:12px; font-family: 'Open Sans'; margin-left:35px">Please check your email</p>
+        <div class="background_only"></div>
+        <div class="purple_desktop">
+            <div class="second_image">
+            <img src="./assets/illustration-2.svg">
+            </div>
+        <div class="purple_background">
+            <div class="second_texts">
+            <h2>Stay productive, wherever you are</h2>
+            <p>Never let location be an issue when accessing your files.
+                Fylo has you covered for all of your file storage needs.</p>
+            <p>Securely share files and folders with friends, family and colleagues for live collaboration.
+                No email attachments required!</p>
+            </div>
+        <div class="green_text">
+            <p>See how Fylo works</p>
+            <img src="./assets/icon-arrow.svg">
+        </div>
+            <hr>
+            <div class="white_box">
+                <img src="./assets/icon-quotes.svg" class="quotes">
+                <p>Fylo has improved our team productivity by an order of magnitude.
+                    Since making the switch our team has become a well-oiled collaboration machine.</p>
+                <div class="together">
+                    <div class="avatar">
+                    <img src="./assets/avatar-testimonial.jpg">
+                    </div>
+                    <div class="identity">
+                    <h1>Kyle Burton</h1>
+                    <p>Founder & CEO, Huddle</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div class="purple_box">
+                <div class="purple_texts">
+                <h2>Get early access today</h2>
+                <p>It only takes a minute to sign up and our free starter tier is extremely generous.
+                    If you have any questions, our support team would be happy to help you.</p>
+                </div>
+                <div class="purple_input">
+                    <label for="email2"></label>
+                    <input type="email" id="email2" name="email2" placeholder="email@example.com" required/>
+                    <button type="submit" onclick="validateEmails()">Get Started For Free</button>
+                    <p id="email2Error" class="errorMessage" style="display:none;">Please Check you email</p>
+                </div>
+            </div>
+            <div class="blue_box">
+                <div class="blue_logos">
+                <img src="./assets/logo.svg" class="white_logo">
+                <div class="phone">
+                    <img src="./assets/icon-phone.svg">
+                    <p>Phone: +1-543-123-4567</p>
+                </div>
+                <div class="mail">
+                    <img src="./assets/icon-email.svg">
+                    <p>example@fylo.com</p>
+                </div>
+                </div>
+                <div class="sections2">
+                    <p>About Us</p>
+                    <p>Jobs</p>
+                    <p>Press</p>
+                    <p>Blog</p>
+                </div>
+                <div class="seperate">
+                <p>Contact Us</p>
+                    <p>Terms</p>
+                    <p>Privacy</p>
+                </div>
+                <div class="icons">
+                    <img src="./assets/icon-facebook.svg">
+                    <img src="./assets/icon-twitter.svg">
+                    <img src="./assets/icon-instagram.svg">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+function validateEmails() {
+  const email1Input = document.getElementById("email1");
+  const email1Error = document.getElementById("email1Error");
+  
+  const email2Input = document.getElementById("email2");
+  const email2Error = document.getElementById("email2Error");
+  
+  // validate email1
+  if (!email1Input.checkValidity()) {
+    email1Input.classList.add("error");
+    email1Error.style.display = "block";
+    email1Input.focus();
+  } else {
+    email1Input.classList.remove("error");
+    email1Error.style.display = "none";
+  }
+  // validate email2
+  if (!email2Input.checkValidity()) {
+    email2Input.classList.add("error");
+    email2Error.style.display = "block";
+    email2Input.focus();
+  } else {
+    email2Input.classList.remove("error");
+    email2Error.style.display = "none";
+  }
+}
+    </script>
+    </body>
+</html>
